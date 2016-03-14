@@ -13,7 +13,6 @@
 		<org.springframework.roo-version>1.0.2.RELEASE</org.springframework.roo-version>
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.5.10</org.slf4j-version>
-                <rpm.install.target>/${env.CATALINA_HOME}/webapps</rpm.install.target>
                 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
                  
 	</properties>
@@ -391,51 +390,7 @@
         </execution>
     </executions>
 </plugin>
-<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>rpm-maven-plugin</artifactId>
-                <version>2.1.4</version>
-                <extensions>true</extensions>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>rpm</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <prefix>${env.CATALINA_HOME}</prefix>
-                    <copyright>2016, IF061-DevOps</copyright>
-                    <distribution>OMS</distribution>
-                    <group>WebApplication</group>
-                    <packager>Mykola Kruliv</packager>
-                    <autoRequires>true</autoRequires>
-                    <defineStatements>
-                        <defineStatement>stop and start tomcat</defineStatement>
-                    </defineStatements>
-                    <mappings>
-                        <mapping>
-                            <directory>${rpm.install.target}</directory>
-                            <filemode>755</filemode>
-                            <sources>
-                                <source>
-                                    <location>target/${project.build.finalName}.war</location>
-                                </source>
-                            </sources>
-                        </mapping>
-                    </mappings>
-                    <preinstallScriptlet>
-                        <scriptFile>scripts/undeploy.sh</scriptFile>
-                    </preinstallScriptlet>
-                    <postinstallScriptlet>
-                        <scriptFile>scripts/deploy.sh</scriptFile>
-                    </postinstallScriptlet>
-                </configuration>
-            </plugin>
-			
-		
-	
-						
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>tomcat-maven-plugin</artifactId>
