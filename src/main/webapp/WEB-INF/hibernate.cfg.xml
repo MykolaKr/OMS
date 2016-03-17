@@ -10,7 +10,7 @@
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<!--<property name="hibernate.connection.url">jdbc:jtds:sqlserver://streamer2005.softserveinc.com/_055_OMS;instance=tc;</property>-->
 		<!--<property name="hibernate.connection.url">jdbc:jtds:sqlserver://ASUS-PC/_056_DB;instance=SQLEXPRESS;</property>-->
-		<property name="hibernate.connection.url">jdbc:mysql://localhost/omsdb</property>
+		<property name="hibernate.connection.url">jdbc:mysql://db1/omsdb</property>
 		<property name="hibernate.connection.username">056db</property>
 		<property name="hibernate.connection.password">056db</property>
 
