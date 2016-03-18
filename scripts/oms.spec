@@ -1,6 +1,6 @@
 Name: oms
 Summary: OMS Application
-Version: 1.0.0
+Version: %{?GIT_TAG_NAME}
 Release: %{?BUILD_NUMBER}
 Group: Applications/Web
 License: GPL 
