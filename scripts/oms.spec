@@ -1,6 +1,7 @@
-Name: oms
+%define build_timestamp %(date +"%Y%m%d")
+Name: oms-dev
 Summary: OMS Application
-Version: 1.0.0
+Version: %{build_timestamp}
 Release: %{?BUILD_NUMBER}
 Group: Applications/Web
 License: GPL 
